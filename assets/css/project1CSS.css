@@ -1,0 +1,515 @@
+body{
+    font-family: Verdana;
+}
+
+/*
+* Apply the same background to each page
+*/
+html{
+    background: #b3b3cc url(../media/bgLarge.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    color: #33334d;
+    font-family: "Trebuchet MS";
+    font-size: 30px;
+}
+
+.table{
+    width: 100%;
+}
+
+table{
+    padding-bottom: 15px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+td{
+    font-family: inherit;
+    color: #29293d;
+    padding-left: 5px;
+    padding-top: 8px;
+}
+
+/*
+* Formatting for the header and navbar
+*/
+.headerText{
+    text-align: center;
+    color: white;
+    font-family: "Trebuchet MS";
+    font-size: 45px;
+    margin-top: 60px;
+}
+
+/*
+* Styling for the google maps components
+*/
+iframe{
+    width: 100%;
+    height: 480px;
+    max-width: 640px;
+    max-height: 480px;
+}
+
+.images{
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*
+* Horizontal aligned images
+*/
+.middleImage1{
+    float: left;
+    width: 50%;
+    height: auto;
+}
+
+.middleImage2{
+    float: right;
+    width: 50%;
+    height: auto;
+}
+
+/*
+* Vertical aligned images
+*/
+.verticalImage1{
+    padding-left: 9%;
+    float: left;
+    width: 40%;
+    height: auto;
+}
+
+.verticalImage2{
+    padding-right: 9%;
+    float: right;
+    width: 40%;
+    height: auto;
+}
+
+p.center{
+    text-align: center;
+    color: #9494b8;
+}
+
+p{
+    color: #9494b8;
+    text-align: left; 
+}
+
+figcaption{
+    text-align: center;
+    color: #9494b8; 
+    padding-bottom: 10px;
+}
+
+/*
+* Styling for all of the body content
+*/
+.content{
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5px;
+    margin-top: 110px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.button{
+    font-family: Verdana;
+}
+
+/**
+* Navbar styling
+*/
+.navbar{
+    overflow: hidden;
+    font-family: Verdana;
+    margin-left: 40%;
+}
+
+.navbar a{
+    float: left;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: none;
+    /**
+    * Transition for color to fade in and out when hovered
+    */
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.dropdown{
+    float: left;
+    border: none;
+    overflow: hidden;
+}
+
+.navbar .active{
+    background-color: white;
+    color: black;
+}
+
+.navbar .active:hover{
+    background-color: white;
+    color: black;
+}
+
+.dropContent .active{
+    background-color: #d1d1e0;
+}
+
+.dropContent .active:hover{
+    background-color: #d1d1e0;
+}
+
+.dropdown .dropButton{
+    font-size: 14px; 
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.navbar a:hover, .dropdown:hover .dropButton{
+    background-color: #47476b;
+}
+
+.dropContent{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropContent a{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropContent a:hover{
+    background-color: #cccccc;
+}
+
+a:active{
+    background-color: #7575a3;
+}
+
+.dropdown:hover .dropContent{
+    display: block;
+}
+
+.comments{
+    background-color: white;
+}
+
+/**
+* Links styling
+*/
+.links{
+    text-align: center;
+}
+
+a.link:link{
+    color: #33334d;
+    text-decoration: none; 
+}
+
+a.link:visited{
+    color: #33334d;
+}
+
+a.link:hover{
+    color: #8585ad;
+    text-decoration: underline;
+}
+
+a.link:active{
+    color: #29293d;
+}
+
+/**
+* Slideshow styling
+*/
+.slideshow{
+    max-width: 75%;
+    position: relative;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.mySlides{
+    display: none;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.9);
+}
+
+/**
+* DHTML component: fade
+*/
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade{
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/**
+* Button links styling
+*/
+a.button:link{
+    color: #3d3d5c;
+    border: 2px solid #3d3d5c;
+    padding: 2px;
+    text-decoration: none; 
+}
+
+a.button:visited{
+    color: #7575a3;
+}
+
+a.button:hover{
+    color: #8585ad;
+    text-decoration: underline;
+}
+
+a.button:active{
+    color: #29293d;
+}
+
+.hamburger{
+    display: none;
+}
+
+/**
+* Tablet size 
+*/
+@media screen and (max-width: 700px) and (min-width: 450px){
+    .navbar{
+        margin-left: 60%;
+    }
+    
+    /**
+    * Use a smaller bg image for smaller screen
+    */
+    html{
+        background: #b3b3cc url(../media/bg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    .slideshow{
+        max-width: 500px;
+    }
+    
+    /**
+    * Hide every other image to fit screen
+    */
+    .middleImage2{
+        display: none;
+    }
+    
+    .middleImage1{
+        width: 100%;
+        height: auto;
+    }
+    
+    .verticalImage2{
+        display: none;
+    }
+    
+    .verticalImage1{
+        width: 80%;
+        height: auto;
+    }
+    
+    .content{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    
+    .hamburger{
+        display: none;
+    }
+}
+
+/**
+* Mobile size
+*/
+@media screen and (max-width: 450px){
+    /**
+    * Navbar media query
+    */
+    .navbar{
+        display: none;
+        height: auto;
+        overflow: visible;
+        width: 200px;
+        z-index: 20;
+        position: absolute;
+        float: right;
+        background-color: #8585ad;
+        margin-top: 55px;
+        right: 5%;
+        border: 2px solid #8585ad;
+    }
+    
+    .navbar a{
+        display: block;
+        text-align: left;
+        width: 168px;
+    }
+    
+    .dropdown{
+        width: 100%;
+    }
+    
+    .dropButton{
+        width: 200px !important;
+        padding-left: none;
+        text-align: left;
+    }
+    
+    .hamburger{
+        display: inline;
+        float: right;
+        padding: 10px;
+        margin-top: -25px;
+    }
+    
+    #burger{
+        background-color: white;
+        font-family: Verdana;
+        font-size: 30px;
+        border: 1 px solid black;
+        width: 50px;
+        height: 50px;
+        padding-bottom: 5px;
+        margin-top: 20px;
+    }
+    
+    .headerText{
+        margin-top: 20px;
+        margin-bottom: -85px;
+        padding-left: none;
+    }
+    
+    table{
+        padding-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    /**
+    * Hide other components
+    */
+    .middleImage2{
+        display: none;
+    }
+    
+    .middleImage1{
+        display: none;
+    }
+    
+    .verticalImage2{
+        display: none;
+    }
+    
+    .verticalImage1{
+        display: none;
+    }
+    
+    .content{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    
+    html{
+        background: #b3b3cc;
+        background-image: none;
+    }
+    
+    iframe{
+        display: none;
+    }
+    
+    .slideshow{
+        display: none;
+    }
+    
+    hr{
+        display: none;
+    }
+    
+    .links{
+        display: none;
+    }
+    
+    figure{
+        display: none;
+    }
+}
